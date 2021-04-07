@@ -79,7 +79,6 @@ describe('DiagramComponent', () => {
 
     component.importDone.subscribe(result => {
       // then
-      console.log(result);
       expect(result).toEqual({
         type: 'success',
         warnings: []

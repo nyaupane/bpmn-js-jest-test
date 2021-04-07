@@ -30,5 +30,4 @@ module.exports = {
     transform: {
         "^.+\\.(ts|js|html)$": "ts-jest",
     },
-    setupFiles: ["jest-canvas-mock"]
 };
