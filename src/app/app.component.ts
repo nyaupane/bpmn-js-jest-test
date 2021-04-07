@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'bpmn-js-angular';
-  diagramUrl = 'assets/AS4122_CL10_Payment.bpmn';
+  diagramUrl = 'assets/sample_bpmn.bpmn';
   importError?: Error;
 
   handleImported(event) {

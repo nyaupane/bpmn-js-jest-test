@@ -7,7 +7,11 @@ module.exports = {
         "@env": "<rootDir>/src/environments/environment",
         "@src/(.*)": "<rootDir>/src/src/$1",
         "@state/(.*)": "<rootDir>/src/app/state/$1",
-        // "bpmn-modeler.production.min.js": "<rootDir>/__mocks__/bpmn-modeler.production.min.js",
+        "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|cto|md|bpmn|txt)$": "<rootDir>/__mocks__/fileMock.js",
+        "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js",
+        "BaseRenderer.js": "<rootDir>/__mocks__/BaseRenderer.js",
+        "svg.js": "<rootDir>/__mocks__/setupJestMock.js",
+        "svg.panzoom.js": "<rootDir>/__mocks__/setupJestMock.js"
     },
     testPathIgnorePatterns: [
         "<rootDir>/src/test.ts",
@@ -26,4 +30,5 @@ module.exports = {
     transform: {
         "^.+\\.(ts|js|html)$": "ts-jest",
     },
+    setupFiles: ["jest-canvas-mock"]
 };

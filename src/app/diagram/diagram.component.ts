@@ -103,12 +103,6 @@ export class DiagramComponent implements OnInit, AfterContentInit, OnChanges, On
     );
   }
 
-  /**
-   * Creates a Promise to import the given XML into the current
-   * BpmnJS instance, then returns it as an Observable.
-   *
-   * @see https://github.com/bpmn-io/bpmn-js-callbacks-to-promises#importxml
-   */
   private importDiagram(xml: string): Observable<{warnings: Array<any>}> {
     return from(this.bpmnJS.importXML(xml) as Promise<{warnings: Array<any>}>);
   }
